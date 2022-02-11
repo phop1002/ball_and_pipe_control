@@ -29,8 +29,8 @@ error_sum   = 0;
 %% Feedback loop
 while true
     %% Read current height
-    [distance,pwm,target,deadpan] = read_data(device);
-    y = ir2y(add_proper_args); % Convert from IR reading to distance from bottom [m]
+    [ir,pwm,target,deadpan] = read_data(device);
+    y = ir2y(ir); % Convert from IR reading to distance from bottom [m]
     
     %% Calculate errors for PID controller
     error_prev = error;             % D
@@ -39,8 +39,8 @@ while true
     
     %% Control
     prev_action = action;
-    %action = % Come up with a scheme no answer is right but do something
-    % set_pwm(add_proper_args); % Implement action
+    action = action+1;      % Come up with a scheme no answer is right but do something
+    set_pwm(device,action); % Implement action
         
     % Wait for next sample
     pause(sample_rate)
