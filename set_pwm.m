@@ -30,4 +30,7 @@ action = sprintf('P%04.f', pwm_value);
 % string value of pwm_value
 % use the serialport() command options to change the PWM value to action
 
+write(device,action,'String');
+
+
 end

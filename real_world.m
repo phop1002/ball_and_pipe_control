@@ -16,9 +16,9 @@ target      = 0.5;   % Desired height of the ball [m]
 sample_rate = 0.25;  % Amount of time between controll actions [s]
 
 %% Give an initial burst to lift ball and keep in air
-set_pwm(device,2500); % Initial burst to pick up ball
-pause(0.1) % Wait 0.1 seconds
-set_pwm(device,1500); % Set to lesser value to level out somewhere in
+set_pwm(device,0); % Initial burst to pick up ball
+pause(1) % Wait 0.1 seconds
+set_pwm(device,2800); % Set to lesser value to level out somewhere in
 % the pipe
 
 %% Initialize variables
