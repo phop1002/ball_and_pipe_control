@@ -56,4 +56,6 @@ Lines 31+ occur in a permanent loop once the system is running. The first step i
 
 A brief pause occurs before the next iteration occurs and the process repeats.
 
+---
 
+To begin the process, real_world.m should be called in Command Window.
