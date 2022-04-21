@@ -1,8 +1,15 @@
-# Ball and Pipe Control System
+# Ball and Pipe Control System, Team Parzeval
 
-Team Parzeval
-Antonio DeAngelis, Parker Hopkins, Shahadat Talukder, Vincent Del Tufo, Whitten Oswald
-Tyler Ziesse
+
+Antonio DeAngelis, Parker Hopkins, Shahadat Talukder, Vincent Del Tufo, Whitten Oswald, Tyler Ziesse
+
+## Project Overview:
+
+
+
+## Theory of Control Method
+
+## Guide to Use Code
 
 
 
