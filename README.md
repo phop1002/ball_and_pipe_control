@@ -24,7 +24,17 @@ Any type of control system can be chosen to achieve this. Our group has elected 
  
 
 ## Theory of Control Method: Q-Learning
-Q-Learning is a type of unsupervised reinforcement learning that allows for the training of a system to better adapt to its environment to accomplish a certain goal, and to accomplish it with a higher degree of success. It takes the current state of a system (referred to as the agent) and attempts to maximize a reward value. This value is modified through positive reinforcement, with more reward points being given for better performance.
+Q-Learning is a branch of machine learning that emphasizes an unsupervised approach to the problem in the form of reinforcement learning. 
+
+
+It is a model-free, off-policy, algorithm that utilizes a Q-table in tandem with the Q-function to obtain optimal Q-values for optimization of the goal (or system). 
+
+
+Works with the idea of maximizing the reward obtained from the agent (system) interacting with the environment when trying to achieve the goal. The maximized value is stored as a Q-value in the Q-table.
+
+
+This Q-table is then used as a reference for where the maximum expected future rewards are stored. These values are used to find the next action for the agent and, in this case, the subsequent system response feedback. 
+
 
 
 ## Guide to Use Code:
@@ -33,4 +43,3 @@ Q-Learning is a type of unsupervised reinforcement learning that allows for the 
 
 
 
-MATLAB codes to open serial communication with a ball and pipe system. The system is made of a vertical cylinder with a ping pong ball controlled by a fan on the bottom and height measured by a time of flight sensor on top. The objective is to balance the ball at a target altitude. 
