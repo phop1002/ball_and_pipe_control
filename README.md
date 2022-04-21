@@ -40,17 +40,11 @@ The Q-table as well as the rest of the controller components for this project ar
 
 
 ## Guide to Use Code:
-There are a few necessary MATLAB functions to understand when using this controller.
+The first step to use this code is to ensure the USB port your computer uses is properly referenced in real_world.m.
 
-ir2y.m
----
-function [y,pipe_percentage] = ir2y(ir)
-Inputs:
- ~ ir: the IR reading from time of flight sensor
-Outputs:
- ~ y: the distance in [m] from the bottom to the ball
- ~ pipe_percentage: on a scale of 0 (bottom of pipe) to 1 (top of pipe)
- where is the ball
+Once the USB from the ball-and-pipe system is hooked up to your computer, go to 'Device Manager' and under 'Ports', check the name of the port the computer uses to identify the USB. The default value is "COM3", but your computer might use a different name. You will have to change this if that is the case in line 12 of real_world.m where it calls the MATLAB serialport() function.
+
+
 
 
 
