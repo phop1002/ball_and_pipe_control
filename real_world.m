@@ -16,7 +16,7 @@ target      = 0.5;   % Desired height of the ball [m]
 sample_rate = 0.25;  % Amount of time between controll actions [s]
 
 %% Give an initial burst to lift ball and keep in air
-set_pwm(device,0); % Initial burst to pick up ball
+set_pwm(device,1000); % Initial burst to pick up ball
 pause(1) % Wait 0.1 seconds
 set_pwm(device,2800); % Set to lesser value to level out somewhere in
 % the pipe
@@ -39,7 +39,14 @@ while true
     
     %% Control
     prev_action = action;
-    action = action+1;      % Come up with a scheme no answer is right but do something
+    if (y>target)
+        action=action-1;
+    elseif (y<target)
+        action=action+1;
+    end
+
+
+
     set_pwm(device,action); % Implement action
         
     % Wait for next sample
