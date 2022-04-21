@@ -1,4 +1,4 @@
-# Ball and Pipe Control System, Team Parzeval
+# Team Parzeval: Ball and Pipe Control System
 
 
 Antonio DeAngelis, Parker Hopkins, Shahadat Talukder, Vincent Del Tufo, Whitten Oswald, Tyler Ziesse
