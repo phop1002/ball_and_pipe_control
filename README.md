@@ -36,9 +36,21 @@ Works with the idea of maximizing the reward obtained from the agent (system) in
 This Q-table is then used as a reference for where the maximum expected future rewards are stored. These values are used to find the next action for the agent and, in this case, the subsequent system response feedback. 
 
 
+The Q-table as well as the rest of the controller components for this project are implemented in MATLAB. 
+
 
 ## Guide to Use Code:
+There are a few necessary MATLAB functions to understand when using this controller.
 
+ir2y.m
+---
+function [y,pipe_percentage] = ir2y(ir)
+Inputs:
+ ~ ir: the IR reading from time of flight sensor
+Outputs:
+ ~ y: the distance in [m] from the bottom to the ball
+ ~ pipe_percentage: on a scale of 0 (bottom of pipe) to 1 (top of pipe)
+ where is the ball
 
 
 
