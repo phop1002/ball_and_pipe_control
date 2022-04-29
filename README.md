@@ -47,13 +47,13 @@ The first step to use this code is to ensure the USB port your computer uses is 
 Once the USB from the ball-and-pipe system is hooked up to your computer, go to 'Device Manager' and under 'Ports', check the name of the port the computer uses to identify the USB. The default value is "COM3", but your computer might use a different name. You will have to change this if that is the case in line 12 of real_world.m where it calls the MATLAB serialport() function.
 
 ### Parameters
-In lines 15-16, the variables target and sample_rate allow the user to adjust the desired height of the ball. Since our pipe is 1m, but the height is represented in centimeters, the maximum value for target is 100 and the minimum is 0.
+The system contains adjustable hyperparameters or variables that target and sample_rate allow the user to adjust the desired height of the ball. Since our pipe is 1m, but the height is represented in centimeters, the maximum value for target is 100 and the minimum is 0.
 
 ### Give an initial burst to lift ball and keep in air
-The lines of code in 19-21 occur once and allow the user to check that their code is working before they enter their control loop. The set_pwm.m function adjusts the fan speed in the range 0-4095, with 0 being OFF and 4095 being the maximum speed of the fan. For more information on the specs of the PWM, reference the SCFBA Specification Sheet pdf file.
+What is done originally at the onset of starting the control system is to allow the user to check that their code is working before they enter their control loop. The set_pwm.m function adjusts the fan speed in the range 0-4095, with 0 being OFF and 4095 being the maximum speed of the fan. For more information on the specs of the PWM, reference the SCFBA Specification Sheet pdf file.
 
 ### Feedback Loop
-Lines 31+ occur in a permanent loop once the system is running. The first step is to read the data from the distance sensor using the custom function read_data.m. The function ir2y.m then converts this value a distance (in m.) from the bottom of the pipe that can be easily compared to our target value. Our control system then determines the best course of action and set_pwm.m is called at the end to change the fan speed accordingly.
+The feedback occurs in a permanent loop once the system is running. The first step is to read the data from the distance sensor using the custom function read_data.m. The function ir2y.m then converts this value a distance (in m.) from the bottom of the pipe that can be easily compared to our target value. Our control system then determines the best course of action from the Q-table and set_pwm.m is called at the end to change the fan speed accordingly.
 
 A brief pause occurs before the next iteration occurs and the process repeats.
 
