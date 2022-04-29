@@ -57,6 +57,9 @@ The feedback occurs in a permanent loop once the system is running. The first st
 
 A brief pause occurs before the next iteration occurs and the process repeats.
 
+### Simulation
+In order to possibly avoid the extremely long training time involved with Q-learning, a simulation can be ran to show the process of Q-learning working. To run this, set the desired height in the 'y_goal' parameter and run the simulation.m MATLAB file in the Command Window.
+
 ---
 
-To begin the process, real_world.m should be called in Command Window. At this point, the Q-learning training will start training towards being controlled at the 'y_goal' height.
+To begin the process of the actual training of the control system on the ball & pipe system, real_world.m should be called in Command Window when the computer is connected to the ball & pipe system via USB. At this point, the Q-learning training will start training towards being controlled at the 'y_goal' height. However, due to the nature of Q-learning, the training may take more than 24 hours to fully complete and the simulation should be run to see actual results in reasonable time.
