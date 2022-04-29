@@ -10,7 +10,7 @@ The basic materials/setup for the project include:
 - A ping pong ball 
 - A cylindrical pipe standing vertically. The pipe should have a narrow enough diameter such that the ball can spin, but is otherwise restricted in the horizontal direction and can only move up and down within the pipe. It should be approximately 1 meter long with a cap on top so the ball cannot fly out the top. 
 - A fan attached at the bottom of the pipe, pointing directly upwards
-- A sensor attached at the top looking directly down into the pipe. This sensor should measure the distance between itself and the ping pong ball and send this data through a USB port to be displayed on a computer terminal. At a distance of 0, the ball is the furthest up it can be. Alternatively, at a distance of 100 (cm), the ball is the farthest away it can be.
+- A sensor attached at the top looking directly down into the pipe. This sensor should measure the distance between itself and the ping pong ball and send this data through a USB port to be displayed on a computer terminal. At a distance of 0, the ball is the furthest up it can be. Alternatively, at a distance of 1m, the ball is the farthest away it can be.
 
 ---
 The goals/objectives for this project are:
@@ -31,10 +31,12 @@ Q-Learning is a branch of machine learning that emphasizes an unsupervised appro
 It is a model-free, off-policy, algorithm that utilizes a Q-table in tandem with the Q-function to obtain optimal Q-values for optimization of the goal (or system). 
 
 
-Works with the idea of maximizing the reward obtained from the agent (system) interacting with the environment when trying to achieve the goal. The maximized value is stored as a Q-value in the Q-table.
+Works with the idea of maximizing the reward obtained from the agent (system) interacting with the environment when trying to achieve the goal via the Bellman equation. The maximized value is stored as a Q-value in the Q-table.
 
 
 This Q-table is then used as a reference for where the maximum expected future rewards are stored. These values are used to find the next action for the agent and, in this case, the subsequent system response feedback. 
+
+An epsilon greedy strategy is used within our system to allow for the agent to explore its environment, although not at an unnecessary rate, as the epsilon greedy strategy is used to balance the exploration and exploitation of the environment by the agent.
 
 
 The Q-table as well as the rest of the controller components for this project are implemented in MATLAB. 
