@@ -36,7 +36,7 @@ Works with the idea of maximizing the reward obtained from the agent (system) in
 
 This Q-table is then used as a reference for where the maximum expected future rewards are stored. These values are used to find the next action for the agent and, in this case, the subsequent system response feedback. 
 
-An epsilon greedy strategy is used within our system to allow for the agent to explore its environment, although not at an unnecessary rate, as the epsilon greedy strategy is used to balance the exploration and exploitation of the environment by the agent.
+An epsilon greedy strategy is used within our system to allow for the agent to explore its environment, although not at an unnecessary rate. The epsilon greedy strategy is essentially used to balance the exploration and exploitation of the environment by the agent. In regards to the control system, it allows for the system to experiment with the pwm fan rate against the desired height goal and see what the reward is based off how far or close it is to the desired height. 
 
 
 The Q-table as well as the rest of the controller components for this project are implemented in MATLAB. 
