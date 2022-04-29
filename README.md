@@ -44,10 +44,10 @@ The Q-table as well as the rest of the controller components for this project ar
 The first step to use this code is to ensure the USB port your computer uses is properly referenced in real_world.m.
 
 ### Connect to device
-Once the USB from the ball-and-pipe system is hooked up to your computer, go to 'Device Manager' and under 'Ports', check the name of the port the computer uses to identify the USB. The default value is "COM3", but your computer might use a different name. You will have to change this if that is the case in line 12 of real_world.m where it calls the MATLAB serialport() function.
+Once the USB from the ball-and-pipe system is hooked up to your computer, go to 'Device Manager' and under 'Ports', check the name of the port the computer uses to identify the USB. The default value is "COM3", but your computer might use a different name. You will have to change this if that is the case in the variable statement of 'device' of real_world.m where it calls the MATLAB serialport() function.
 
 ### Parameters
-The system contains adjustable hyperparameters or variables that target and sample_rate allow the user to adjust the desired height of the ball. Since our pipe is 1m, but the height is represented in centimeters, the maximum value for target is 100 and the minimum is 0.
+The system contains adjustable hyperparameters or variables that target and sample_rate allow the user to adjust the desired height of the ball. Since our pipe is 1m, but the height is represented in meters, the maximum value for target is 1 and the minimum is 0. To set the desired height of the system, change the 'y_goal' parameter to the height desired in meters.
 
 ### Give an initial burst to lift ball and keep in air
 What is done originally at the onset of starting the control system is to allow the user to check that their code is working before they enter their control loop. The set_pwm.m function adjusts the fan speed in the range 0-4095, with 0 being OFF and 4095 being the maximum speed of the fan. For more information on the specs of the PWM, reference the SCFBA Specification Sheet pdf file.
@@ -59,4 +59,4 @@ A brief pause occurs before the next iteration occurs and the process repeats.
 
 ---
 
-To begin the process, real_world.m should be called in Command Window.
+To begin the process, real_world.m should be called in Command Window. At this point, the Q-learning training will start training towards being controlled at the 'y_goal' height.
